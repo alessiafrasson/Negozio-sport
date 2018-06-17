@@ -85,13 +85,24 @@ public class HomeMedico extends JFrame implements Observer {
 		contentPane.add(PazienticomboBox, "cell 5 4,growx");
 
 		nuovoPazBtn = new JButton("Nuovo paziente");
+		nuovoPazBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		contentPane.add(nuovoPazBtn, "flowx,cell 5 6");
 
 		nuovaSegnBtn = new JButton("Nuova segnalazione");
-		nuovaSegnBtn.setVisible(false);
+		nuovaSegnBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		contentPane.add(nuovaSegnBtn, "cell 5 6");
 
 		nuovaTerapiaBtn = new JButton("Nuova terapia");
+		nuovaTerapiaBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		nuovaTerapiaBtn.setVisible(false);
 		contentPane.add(nuovaTerapiaBtn, "cell 5 6");
 

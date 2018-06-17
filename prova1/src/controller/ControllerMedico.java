@@ -67,7 +67,21 @@ public class ControllerMedico {
             }
 		});
 		
+		viewMedico.addNuovaSegnListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	System.out.println("metodo addNuovaSegnListener");
+            	nuovaSegn.setVisible(true);
+			}
+		});
 		
+		viewMedico.addNuovaTerapiaListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	System.out.println("metodo addNuovaTerapiaListener");
+            	nuovaTer.setVisible(true);
+            }
+        });
 
 		nuovoPaz.addConfermaDatiListener(new ActionListener(){
             @Override

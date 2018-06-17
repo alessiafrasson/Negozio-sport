@@ -28,7 +28,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -72,12 +72,12 @@ public class Login extends JFrame {
 		btnLogin.addActionListener(a);
 	}
 
-	public String getUserMedico() {
+	public String getUser() {
 		return userField.getText();
 	}
 
 	@SuppressWarnings("deprecation")
-	public String getPassMedico() {
+	public String getPass() {
 		return passField.getText();
 	}
 	
@@ -88,5 +88,8 @@ public class Login extends JFrame {
 	public void setPasswordField(String text){
 		passField.setText(text);
 	}
+	
+	public void close() {}
+	
 
 }

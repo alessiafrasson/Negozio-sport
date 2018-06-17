@@ -6,6 +6,7 @@ import model.FattoreRischio;
 import model.Paziente;
 import model.Utente;
 import view.NuoviFattoriRischio;
+import view.HomeFarmacologo;
 import view.HomeMedico;
 import view.Login;
 import view.NuovaSegnalazione;
@@ -31,12 +32,13 @@ public class Start {
 		
 		Login loginView = new Login();
 		HomeMedico viewMedico = new HomeMedico(utente,paziente);
+		HomeFarmacologo viewFarmacologo = new HomeFarmacologo(utente);
 		NuovoPaziente nuovoPaz = new NuovoPaziente();
 		NuovaTerapia nuovaTer = new NuovaTerapia();
 		NuovaSegnalazione nuovaSegn = new NuovaSegnalazione();
 		NuoviFattoriRischio fattoriRischio = new NuoviFattoriRischio(fattore);
 		
-		ControllerLogin controllerLog = new ControllerLogin(utente, loginView,viewMedico);
+		ControllerLogin controllerLog = new ControllerLogin(utente, loginView,viewMedico, viewFarmacologo);
 		ControllerMedico controllerMed = new ControllerMedico(utente, paziente, fattore,
 				viewMedico, nuovoPaz, nuovaTer, nuovaSegn,fattoriRischio);
 		loginView.setVisible(true);

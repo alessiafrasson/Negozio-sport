@@ -74,6 +74,8 @@ public class Utente extends Observable{
 		this.tipo = tipo;
 	}
 	
+
+	
 	
 	public ArrayList<Utente> getUtenti(){
 
@@ -110,7 +112,7 @@ public class Utente extends Observable{
 	public boolean login(String username, String password){
 		
 		try {
-
+			
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:DBSorveglianza.db");
 			Statement stat = conn.createStatement();
 
@@ -137,6 +139,31 @@ public class Utente extends Observable{
 		return (getId()!=0);
 	}
 	
+	
+public String getTypeDB(){
+		
+	String tipo="";
+	
+		try {
+			
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:DBSorveglianza.db");
+			Statement stat = conn.createStatement();
+
+			ResultSet res = stat.executeQuery("SELECT strTipo FROM Utente WHERE strUsername = '" + this.id );
+			
+			tipo= res.getString("strTipo");
+		
+			res.close();
+			conn.close();
+			
+		} catch (SQLException SQLexc) {
+			SQLexc.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return tipo;
+	}
 	
 	
 	public static class UtenteBuilder{

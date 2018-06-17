@@ -22,7 +22,7 @@ public class NuovoPaziente extends JFrame {
 	 * Create the frame.
 	 */
 	public NuovoPaziente() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new MigLayout("", "[][][][grow]", "[40.00][][][][][][][]"));
 		
